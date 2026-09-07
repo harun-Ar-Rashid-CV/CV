@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Harun-Ar-Rashid — CV</title>
+<meta name="description" content="CV of Md. Harun-Ar-Rashid: work experience, research, publications and books.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --leather:#5A3825;
+    --leather-dark:#3E2718;
+    --leather-light:#7A4E32;
+    --stitch:#C9A227;
+    --paper:#FBF3E1;
+    --paper-shadow:#E7D8B4;
+    --ink:#2B2318;
+    --ink-soft:#6B5D46;
+    --brass:#C9A227;
+    --brass-dark:#8C6B1B;
+    --folder-inactive:#B08B5E;
+  }
+  *{box-sizing:border-box;}
+  /* hide Google Translate top banner + prevent body shift, but keep it usable */
+  body{top:0 !important;}
+  .goog-te-banner-frame{display:none !important;}
+  .goog-tooltip{display:none !important;}
+  .goog-tooltip:hover{display:none !important;}
+  .goog-text-highlight{background:none !important; box-shadow:none !important;}
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(ellipse at top, #6B4226 0%, var(--leather-dark) 70%);
+    background-attachment:fixed;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    padding:2.5rem 1.5rem 4rem;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(25deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 5px);
+    pointer-events:none;
+    z-index:0;
+  }
+  .binder{
+    position:relative;
+    max-width:960px;
+    margin:0 auto;
+    z-index:1;
+  }
+  .nameplate{
+    background:linear-gradient(180deg,#E8C976 0%, var(--brass) 45%, var(--brass-dark) 100%);
+    border:3px solid #7A5A15;
+    border-radius:8px;
+    box-shadow:
+      0 6px 14px rgba(0,0,0,0.55),
+      inset 0 1px 0 rgba(255,255,255,0.5),
+      inset 0 -3px 6px rgba(0,0,0,0.25);
+    padding:1.1rem 1.8rem;
+    margin-bottom:0;
+    display:flex;
+    align-items:center;
+    gap:1.2rem;
+    flex-wrap:wrap;
+  }
+  .nameplate img{
+    width:64px;height:64px;border-radius:50%;
+    object-fit:cover;
+    border:2px solid #5A3F0E;
+    box-shadow:0 2px 6px rgba(0,0,0,0.5), inset 0 0 0 2px #F3DE9E;
+  }
+  .nameplate h1{
+    font-family:'Libre Baskerville',serif;
+    font-size:1.55rem;
+    margin:0;
+    color:#3E2A05;
+    text-shadow:0 1px 0 rgba(255,255,255,0.35);
+    letter-spacing:0.01em;
+  }
+  .nameplate .role{
+    font-family:'Courier Prime',monospace;
+    font-size:0.82rem;
+    color:#4A3308;
+    margin-top:0.15rem;
+  }
+  .translate-tag{
+    margin-left:auto;
+    background:linear-gradient(180deg,#FFFDF6,#E7D8B4);
+    border:1px solid #8C6B1B;
+    border-radius:5px;
+    padding:0.4rem 0.7rem;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.6);
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+  }
+  .translate-tag span{
+    font-family:'Courier Prime',monospace;
+    font-size:0.72rem;
+    color:var(--leather-dark);
+    white-space:nowrap;
+  }
+  #google_translate_element{line-height:1;}
+
+  .tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:2px;
+    padding:0 0.5rem;
+    margin-top:0.6rem;
+    position:relative;
+    z-index:2;
+  }
+  .tab-btn{
+    font-family:'Courier Prime',monospace;
+    font-size:0.78rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+    color:#F1E4C3;
+    background:linear-gradient(180deg, var(--folder-inactive) 0%, #8C6A42 100%);
+    border:1px solid #4A3319;
+    border-bottom:none;
+    padding:0.55rem 0.9rem 0.5rem;
+    border-radius:8px 8px 0 0;
+    cursor:pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 -2px 4px rgba(0,0,0,0.15);
+    transform:translateY(6px);
+    transition:transform .15s ease, background .15s ease;
+    position:relative;
+  }
+  .tab-btn:hover{transform:translateY(2px); color:#fff;}
+  .tab-btn.active{
+    background:linear-gradient(180deg, var(--paper) 0%, var(--paper-shadow) 100%);
+    color:var(--leather-dark);
+    transform:translateY(0);
+    z-index:3;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 -3px 6px rgba(0,0,0,0.1);
+  }
+  .page{
+    background:
+      linear-gradient(180deg, var(--paper) 0%, #F5E9CB 100%);
+    border:1px solid #C9B583;
+    border-radius:0 6px 6px 6px;
+    box-shadow:
+      0 14px 30px rgba(0,0,0,0.5),
+      inset 0 0 60px rgba(139,109,58,0.08);
+    padding:2.2rem 2.4rem 2.6rem;
+    position:relative;
+    min-height:420px;
+  }
+  .page::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0; width:52px;
+    background:repeating-linear-gradient(180deg, transparent 0 34px, rgba(139,60,40,0.18) 34px 36px);
+    border-right:2px dashed rgba(139,60,40,0.25);
+    opacity:0.5;
+  }
+  .page-inner{position:relative; padding-left:0.5rem;}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block; animation:reveal .28s ease;}
+  @keyframes reveal{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
+  h2{
+    font-family:'Libre Baskerville',serif;
+    color:var(--leather-dark);
+    font-size:1.4rem;
+    margin:0 0 1.1rem;
+    padding-bottom:0.5rem;
+    border-bottom:2px solid var(--stitch);
+    display:inline-block;
+  }
+  h3.subhead{
+    font-family:'Courier Prime',monospace;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    margin:1.4rem 0 0.6rem;
+  }
+  .card{
+    background:#FFFDF6;
+    border:1px solid #D8C69A;
+    border-left:4px solid var(--stitch);
+    border-radius:3px;
+    padding:0.85rem 1.1rem;
+    margin-bottom:0.9rem;
+    box-shadow:0 2px 5px rgba(0,0,0,0.12), inset 0 0 0 1px rgba(255,255,255,0.5);
+  }
+  .card .title{font-weight:700; color:var(--leather-dark); font-family:'Libre Baskerville',serif; font-size:1.02rem;}
+  .card .meta{font-family:'Courier Prime',monospace; font-size:0.78rem; color:var(--ink-soft); margin:0.2rem 0 0.4rem;}
+  .card p, .card ul{margin:0.2rem 0; font-size:0.93rem;}
+  ul.plain{padding-left:1.2rem; margin:0.4rem 0;}
+  ul.plain li{margin-bottom:0.4rem; font-size:0.93rem;}
+  ol.book-list, ol.pub-list{padding-left:1.3rem;}
+  ol.book-list li, ol.pub-list li{margin-bottom:0.95rem; font-size:0.92rem;}
+  ol.book-list li a, ol.pub-list li a{
+    font-family:'Courier Prime',monospace;
+    font-size:0.76rem;
+    color:var(--brass-dark);
+    text-decoration:none;
+    border-bottom:1px dotted var(--brass-dark);
+  }
+  ol.book-list li a:hover, ol.pub-list li a:hover{color:var(--leather-dark);}
+  .badge-row{display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.8rem;}
+  .badge{
+    background:linear-gradient(180deg,#F3DE9E,#C9A227);
+    border:1px solid #8C6B1B;
+    color:#3E2A05;
+    font-family:'Courier Prime',monospace;
+    padding:0.28rem 0.6rem;
+    border-radius:3px;
+    font-size:0.75rem;
+    box-shadow:0 1px 2px rgba(0,0,0,0.3);
+  }
+  .skills-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.1rem;}
+  .contact-row{display:flex; flex-wrap:wrap; gap:1.5rem; align-items:flex-start;}
+  .rolodex{
+    background:#FFFDF6;
+    border:1px solid #D8C69A;
+    border-radius:4px;
+    padding:1rem 1.2rem;
+    box-shadow:0 3px 8px rgba(0,0,0,0.18);
+    flex:1 1 260px;
+  }
+  .rolodex ul{list-style:none; padding:0; margin:0; font-size:0.9rem;}
+  .rolodex ul li{margin-bottom:0.5rem;}
+  .rolodex a{color:var(--brass-dark);}
+  .cv-btn{
+    display:inline-block;
+    font-family:'Courier Prime',monospace;
+    font-weight:700;
+    text-decoration:none;
+    color:#3E2A05;
+    background:linear-gradient(180deg,#F3DE9E,#C9A227 60%, #8C6B1B);
+    border:1px solid #6E5314;
+    border-radius:5px;
+    padding:0.7rem 1.2rem;
+    box-shadow:0 4px 8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.6);
+    margin-top:0.9rem;
+  }
+  .cv-btn:hover{filter:brightness(1.05);}
+  .quote-card{
+    font-family:'Libre Baskerville',serif;
+    font-style:italic;
+    background:#FFFDF6;
+    border:1px solid #D8C69A;
+    border-left:4px solid var(--stitch);
+    padding:0.9rem 1.2rem;
+    border-radius:3px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    margin-bottom:1.2rem;
+    color:var(--ink-soft);
+  }
+  .contact-form{
+    background:#FFFDF6;
+    border:1px solid #D8C69A;
+    border-radius:4px;
+    padding:1.2rem;
+    max-width:420px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.18);
+  }
+  .contact-form label{display:block; font-family:'Courier Prime',monospace; font-size:0.75rem; color:var(--ink-soft); margin-bottom:0.25rem;}
+  .contact-form input, .contact-form textarea{
+    width:100%; padding:0.5rem; margin-bottom:0.8rem;
+    border:1px solid #C9B583; border-radius:3px;
+    background:#FBF3E1; font-family:inherit; font-size:0.88rem;
+  }
+  .contact-form button{
+    font-family:'Courier Prime',monospace; font-weight:700;
+    background:linear-gradient(180deg,#7A5A3A,#5A3825);
+    color:#F1E4C3; border:1px solid #3E2718; border-radius:4px;
+    padding:0.55rem 1.1rem; cursor:pointer;
+    box-shadow:0 3px 6px rgba(0,0,0,0.35);
+  }
+  footer{
+    text-align:center;
+    color:#D8C69A;
+    font-family:'Courier Prime',monospace;
+    font-size:0.78rem;
+    margin-top:1.5rem;
+    position:relative;
+    z-index:1;
+  }
+  @media (max-width:640px){
+    .page{padding:1.4rem 1.2rem 1.8rem;}
+    .page::before{display:none;}
+    .skills-grid{grid-template-columns:1fr;}
+    .nameplate{flex-wrap:wrap;}
+    .translate-tag{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+<div class="binder">
+
+  <div class="nameplate">
+    <img src="https://raw.githubusercontent.com/harun-Ar-Rashid-CV/CV/main/Photo.jpg" alt="Photo of Md. Harun-Ar-Rashid">
+    <div>
+      <h1>Md. Harun-Ar-Rashid</h1>
+      <div class="role">Network Integration Manager · Lisbon, Portugal</div>
+    </div>
+    <div class="translate-tag">
+      <span>Translate:</span>
+      <div id="google_translate_element"></div>
+    </div>
+  </div>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab-btn active" data-tab="home">Home</button>
+    <button class="tab-btn" data-tab="experience">Experience</button>
+    <button class="tab-btn" data-tab="education">Education</button>
+    <button class="tab-btn" data-tab="research">Research</button>
+    <button class="tab-btn" data-tab="publications">Publications</button>
+    <button class="tab-btn" data-tab="books">Books</button>
+    <button class="tab-btn" data-tab="training">Training</button>
+  </nav>
+
+  <div class="page">
+    <div class="page-inner">
+
+      <!-- HOME -->
+      <section class="tab-panel active" id="home">
+        <h2>Home</h2>
+        <div class="quote-card">"Success has one rule, Try your best, people may like it."</div>
+
+        <h3 class="subhead">About</h3>
+        <ul class="plain">
+          <li>One year of working experience with BRAC Uganda as a Regional Coordinator (Agriculture), Uganda.</li>
+          <li>Three years of working experience as Research Assistant/Associate with different professors of Khulna University, Bangladesh.</li>
+          <li>Excellent organizational ability, dedication to responsibilities, and can work under minimum supervision.</li>
+        </ul>
+
+        <h3 class="subhead">Contact</h3>
+        <div class="contact-row">
+          <div class="rolodex">
+            <ul>
+              <li>Email: <a href="mailto:harun.at04ku@gmail.com">harun.at04ku@gmail.com</a></li>
+              <li>Phone: 00351-920564613</li>
+              <li>Address: Rua Do Benformoso 218, 1100-083, Lisbon, Portugal</li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/harun-ar-rashid-7b057887/" target="_blank" rel="noopener">harun-ar-rashid</a></li>
+              <li>Instagram: @bismarkbangali</li>
+              <li>Twitter: @Bismarkbangali</li>
+            </ul>
+            <a class="cv-btn" href="https://raw.githubusercontent.com/harun-Ar-Rashid-CV/CV/main/Harun_Ar_Rashid_CV_TechnicalSupportEngineer.docx" target="_blank" rel="noopener">Download CV (.docx)</a>
+          </div>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('This form is visual only. Connect a service like Formspree to receive messages.');">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@email.com">
+            <label for="message">Message</label>
+            <textarea id="message" rows="3" placeholder="Write your message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="tab-panel" id="experience">
+        <h2>Work Experience</h2>
+        <div class="card">
+          <div class="title">Network Integration Manager</div>
+          <div class="meta">Nokia Networks · Lisbon, Portugal · 05/2020 – Present</div>
+          <p>Ensure high level of customer satisfaction in telecom areas including GNOC (Alarm, Fault, Config and Performance Management), Network Integration, Network Planning and Optimization, System Integration.</p>
+        </div>
+        <div class="card">
+          <div class="title">Advisor, Customer Service</div>
+          <div class="meta">Sitel · Lisbon, Portugal · 02/2020 – 04/2020</div>
+          <p>Ensure high level of customer satisfaction, receive inbound calls, handle special requests, provide useful information.</p>
+        </div>
+        <div class="card">
+          <div class="title">Hotel Manager</div>
+          <div class="meta">Lisbon Prime Hostels and Rooms · Lisbon, Portugal · 10/2018 – 02/2020</div>
+          <p>Overall supervision: purchasing, guest management, staff management, online booking management, work schedules, internal finance, budgeting, public relations.</p>
+        </div>
+        <div class="card">
+          <div class="title">Research Assistant</div>
+          <div class="meta">State Plant Breeding Institute, Uni. of Hohenheim · Germany · 06/2012 – 10/2015</div>
+          <p>Field experiment setup, laboratory experiment, coordination with team, data collection.</p>
+        </div>
+        <div class="card">
+          <div class="title">Training and Media Communication Officer</div>
+          <div class="meta">SAFE (Social Activities for Environment) · Khulna, Bangladesh · 05/2010 – 04/2011</div>
+          <p>Organizing and facilitating training, training manual preparation, research and publication, reporting, communication with stakeholders and civil societies.</p>
+        </div>
+        <div class="card">
+          <div class="title">Regional Coordinator</div>
+          <div class="meta">BRAC Uganda · Kampala, Uganda · 05/2009 – 04/2010</div>
+          <p>Project planning, grant and donor management, financial management, project implementation, logistics, training and facilitation, reporting to country director.</p>
+        </div>
+        <div class="card">
+          <div class="title">Intern (Research and Development)</div>
+          <div class="meta">PRADIPAN · Khulna, Bangladesh · 10/2008 – 04/2009</div>
+          <p>Data collection, data analysis, report preparation.</p>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="tab-panel" id="education">
+        <h2>Education and Training</h2>
+        <div class="card">
+          <div class="title">MSc in Agricultural Sciences in the Tropics and Subtropics (International Development)</div>
+          <div class="meta">Hohenheim University, Germany · 08/2014</div>
+        </div>
+        <div class="card">
+          <div class="title">B.Sc. (Hons), Agriculture</div>
+          <div class="meta">Khulna University, Bangladesh · 08/2008 · 3.40/4.0</div>
+        </div>
+        <div class="card">
+          <div class="title">Higher Secondary Certificate</div>
+          <div class="meta">Jessore Board, Satkhira, Bangladesh · 12/2002 · 1st Division (~4.85/5)</div>
+        </div>
+        <div class="card">
+          <div class="title">Secondary School Certificate</div>
+          <div class="meta">Jessore Board, Bangladesh · 12/2000 · 1st Division (~4.90/5)</div>
+        </div>
+        <div class="badge-row">
+          <span class="badge">University scholarship (Merit)</span>
+          <span class="badge">Primary Scholarship (Talent pool)</span>
+          <span class="badge">Dr. Nasim Uddin Wakf Scholarship</span>
+          <span class="badge">University BNCC Scholarship</span>
+          <span class="badge">University Cultural Scholarship</span>
+        </div>
+      </section>
+
+      <!-- RESEARCH -->
+      <section class="tab-panel" id="research">
+        <h2>Research Projects</h2>
+        <ol class="pub-list">
+          <li>Impact of NGO Activities on Agricultural Practices in the Central & Northern Region of Uganda.</li>
+          <li>Beef Fattening in Promoting Self-employment, Income Generation and Poverty Reduction. (Funded by Social Science Research Council, Bangladesh)</li>
+          <li>Identification of Training needs of Teachers of Khulna University and Development of Training Module. (Funded by University Grant Commission, Bangladesh)</li>
+          <li>Worker Rights Situation in the Shrimp and Fish Processing Factories in the South-Western Part of Bangladesh. (Funded by ACILS and SAFE)</li>
+          <li>Problem Identification and finding the most sustainable way of agricultural production to meet food security in Northern Ghana.</li>
+        </ol>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section class="tab-panel" id="publications">
+        <h2>Publications</h2>
+        <h3 class="subhead">Articles published in journals</h3>
+        <ol class="pub-list">
+          <li>Rashid H.A, Ahmed M.B, Ali M.Y (Dec. 2009). Problem Confrontation in the Adoption of Agroforestry Practices in the South-Western Region of Bangladesh. <em>South Asian J. Agric.</em>, 4(1&2): 76-80.</li>
+          <li>Sarker B, Ahmed M.B, Islam M.M, Maskawat M.S, Islam M.R, Rashid H.A (Dec. 2009). Use of Printed Materials Related to Farm Information by The Students of Khulna University, Bangladesh. <em>South Asian J. Agric.</em>, 4(1&2): 72-75.</li>
+          <li>Islam M.S, Rashid H.A, Howlader A, Ahmed M.F (Apr–Sept 2011). Rural Urban Migration: A Quest for Economic Development and Poverty Reduction. <em>Journal of Economic Policy & Research</em>, India, Vol. 6, No. 2.</li>
+          <li>Rashid H.A, Ahmed M.B, Ali M.Y (2010). Job Displacement in the Primary Actors of Forest (Sunderban) in Talbunia Village of Rampal Upazila under Bagerhat District, Bangladesh. (In processing publication, South Asian J. Agric.)</li>
+          <li>Islam M.M, Rashid H.A, Sayed A.A, Ali M.H (2010). Problem Confrontation in the Livelihood Pattern of Street Children in Khulna City, Bangladesh. (In processing publication, Plan Plus)</li>
+          <li>Das S, Rashid H.A, Quddus K.G, Rahman M.F (2010). Soil Chemical Properties of Rangamatia Mouja at Mollahat Upazila under Bagerhat, Bangladesh. (In processing publication, South Asian J. Agric.)</li>
+          <li>Ahmed I, Rashid H.A, Ahmed M.B (Dec. 2010). Adoption of Selected Recommended Agronomic Practices by the Boro Rice Grower of Jolma Union under Khulna District, Bangladesh. (In processing publication, South Asian J. Agric.)</li>
+          <li>Das K.B, Kayes I, Rashid H.A (2010). A Comparative Study on Some Physical & Chemical Properties of Raintree, Sissoo, Akasmoni & Rajkoroi Wood. (In processing publication, South Asian J. Agric.)</li>
+        </ol>
+        <h3 class="subhead">Papers presented at international conferences</h3>
+        <ol class="pub-list">
+          <li>Rashid H.A (Oct. 2010). Financing of Education in Pakistan: Urgently Needs to Increase, to Reform & to Meet Education for All (EFA) Goal. 3rd International Conference on Education, Punjab University, Pakistan, 21–23 Oct. 2010, p. 107.</li>
+          <li>Islam M.S, Rashid H.A (Oct. 2010). Public Private Partnership (PPP) in Education: A Comparative Study between Bangladesh and Pakistan. 3rd International Conference on Education, Punjab University, Pakistan, 21–23 Oct. 2010, p. 61-62.</li>
+          <li>Rashid H.A (Nov. 2013). Job Displacement in the Primary Actors of Forest (Sunderban) in Talbunia Village of Rampal Upazila under Bagerhat District. ELLS Scientific Student Conference, University of BOKU, Vienna, Austria.</li>
+        </ol>
+      </section>
+
+      <!-- BOOKS -->
+      <section class="tab-panel" id="books">
+        <h2>Books</h2>
+        <ol class="book-list">
+          <li>Rashid H.A (Apr. 2011). <em>Gender Inequity and Reproductive Health Status of Rural Women in Bangladesh.</em> ISBN 978-3-639-35092-0. <a href="http://www.amazon.com/Gender-Inequity-Reproductive-Health-Status/dp/3639350928" target="_blank" rel="noopener">Amazon</a></li>
+          <li>Rashid H.A, Mistry A.K (Feb. 2010). <em>Socio-Economic Condition and Woman Empowerment in Rural Bangladesh.</em> ISBN 978-3-639-28148-4. <a href="http://www.bod.com/index.php?id=3435&objk_id=489320" target="_blank" rel="noopener">BoD</a></li>
+          <li>Rashid H.A (Dec. 2010). <em>Role of Micro-finance to the Changing Status of Women in Rural Area of Bangladesh.</em> ISBN 978-3-639-31839-5. <a href="http://www.amazon.com/Role-Micro-Finance-Rural-Development-Bangladesh/dp/3639318390" target="_blank" rel="noopener">Amazon</a></li>
+          <li>Rashid H.A (Nov. 2010). <em>Problem confrontation of Eve teasing of Adolescent Girls in Bangladesh.</em> ISBN 978-3-639-31144-0. <a href="http://www.bod.com/index.php?id=3435&objk_id=419864" target="_blank" rel="noopener">BoD</a></li>
+          <li>Rashid H.A (Nov. 2010). <em>People's Perception on Climate Change Vulnerabilities of South-West Coastal Bangladesh.</em> ISBN 978-3-639-31196-9. <a href="http://www.amazon.com/Climate-Change-Vulnerabilities-South-Western-Bangladesh/dp/3639311965" target="_blank" rel="noopener">Amazon</a></li>
+          <li>Rashid H.A, Rahman M.B, Ali M.Y (Oct. 2010). <em>Socioeconomic and Livelihood Changes Due to Shrimp Farming in Bangladesh.</em> ISBN 978-3-639-30258-5. <a href="http://www.bod.com/index.php?id=3435&objk_id=405535" target="_blank" rel="noopener">BoD</a></li>
+          <li>Rashid H.A (Oct. 2010). <em>Socio-economic Condition of the Female Workers of Fish Processing Industries in Bangladesh.</em> ISBN 978-3-639-30852-5. <a href="http://www.bod.com/index.php?id=3435&objk_id=413131" target="_blank" rel="noopener">BoD</a></li>
+          <li>Rashid H.A, Hasan M.R, Iqbal M.S (Jun. 2011). <em>Assessment of CO2 Gas Emission from Transportation Sector Management by Eco-cement and Afforestation in Bangladesh.</em> ISBN 978-3-639-36509-2. <a href="http://www.amazon.com/Assessment-CO2-Gas-Transportation-Afforestation/dp/3639365097" target="_blank" rel="noopener">Amazon</a></li>
+          <li>Rashid H.A (Aug. 2011). <em>Inequities, Changes and Challenges of Labor Forces in Bangladesh.</em> ISBN 978-3-639-337371-4. <a href="http://www.bod.com/index.php?id=3435&objk_id=5202209" target="_blank" rel="noopener">BoD</a></li>
+          <li>Rashid H.A, Hasan M.R, Islam M.R (Jul. 2011). <em>Assessment of Pollution & Impacts on Health and Socio-economic Status in Bangladesh.</em> ISBN 978-3-639-36883-3. <a href="http://www.amazon.com/Assessment-Pollution-Impacts-Health-Bangladesh/dp/3639368835" target="_blank" rel="noopener">Amazon</a></li>
+          <li>Rashid H.A, Hasan M.R, Rahman M.M (Jul. 2011). <em>Geo-chemical Characterization of Groundwater in Bangladesh.</em> ISBN 978-3-639-37128-4. <a href="http://www.bod.com/index.php?id=3435&objk_id=551369" target="_blank" rel="noopener">BoD</a></li>
+          <li>Rashid H.A, Hasan M.R, Islam, Salehin M.R (Jun. 2011). <em>Physico-chemical condition of River water in Bangladesh.</em> ISBN 978-3-639-37048-5. <a href="http://www.amazon.com/PHYSICO-CHEMICAL-CONDITION-RIVER-WATER-BANGLADESH/dp/3639370481" target="_blank" rel="noopener">Amazon</a></li>
+        </ol>
+      </section>
+
+      <!-- TRAINING -->
+      <section class="tab-panel" id="training">
+        <h2>Training and Skills</h2>
+        <h3 class="subhead">Training</h3>
+        <ul class="plain">
+          <li>"Rethinking & Mapping Human Rights" (3 days) — SHED.</li>
+          <li>Editor of the quarterly newsletter "Jiboner Katha" (SAFE).</li>
+          <li>"Introduction to Advocacy & maintenance of advocacy system" (7 days) — SAFE, Khulna, Bangladesh.</li>
+          <li>"Cross Culture Activities in Uganda" (7 days) — BRAC Uganda.</li>
+          <li>"Regional Officers - Office Management Training" (7 days) — BRAC Uganda.</li>
+          <li>"Leadership development and Right to Information Policy in Bangladesh" (1 day) — Transparency International Bangladesh.</li>
+          <li>English language certificate course — Modern Language Centre, Khulna University.</li>
+          <li>Agriculture Extension Training (3 days): rural communities, social survey, technology transfer, rural development.</li>
+        </ul>
+
+        <h3 class="subhead">Skills</h3>
+        <div class="skills-grid">
+          <div class="card">
+            <div class="title">Communication & languages</div>
+            <ul class="plain">
+              <li>Good communication skills, tact, diplomacy, teamwork.</li>
+              <li>English, Bengali, Luganda and Ryankole.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="title">Computing</div>
+            <ul class="plain">
+              <li>MS Word, PowerPoint, Excel, Access.</li>
+              <li>SPSS, MSTAT-C, Photoshop, Illustrator.</li>
+              <li>GIS (ArcView, ArcInfo), remote sensing.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="title">Social involvement</div>
+            <ul class="plain">
+              <li>Youth Red Crescent Society, Khulna University.</li>
+              <li>Former unit leader (Sargent), BNCC.</li>
+              <li>Volunteer, Committee of Concerned Citizens (TIB).</li>
+              <li>Founder and president, Friends Forum, Khulna University.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>Md. Harun-Ar-Rashid — Lisbon, Portugal · harun.at04ku@gmail.com</footer>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',
+        includedLanguages: 'en,pt,fr,de,es,bn',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
